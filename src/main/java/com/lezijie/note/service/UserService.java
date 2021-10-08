@@ -12,6 +12,11 @@ public class UserService {
 
     public ResultInfo<User> userLogin(String userName, String userPwd) {
         ResultInfo<User> resultInfo = new ResultInfo<>();
+        User u = new User();
+        u.setUname(userName);
+        u.setUpwd(userPwd);
+        resultInfo.setResult(u);
+
         if (StrUtil.isBlank(userName) || StrUtil.isBlank(userPwd)) {
             resultInfo.setCode(0);
             resultInfo.setMsg("用户姓名或密码不能为空!");

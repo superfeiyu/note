@@ -32,13 +32,11 @@
             <div class="box show">
                 <form action="user" method="post" id="loginForm">
                     <input type="hidden" name="actionName" value="login">
-                    <input type="text" class="user yahei16" id="userName" name="userName" value=""/><br/><br/>
-                    <input type="password" class="pwd yahei16" id="userPwd" name="userPwd" value=""/><br/><br/>
-                    <input name="" type="checkbox" value="" class="inputcheckbox"/> <label>记住我</label>&nbsp; &nbsp;
-                    <span id="msg" style="color: red; font-size: 12px;">${resultInfo.msg}</span><br/><br/>
-                    <input type="button" class="log jc yahei16" value="登 录" onclick="checkLogin()"/><input type="reset"
-                                                                                                           value="取 消"
-                                                                                                           class="reg jc yahei18"/>
+                    <input type="text" class="user yahei16" id="userName" name="userName" value="${resultInfo.result.uname}" /><br /><br />
+                    <input type="password" class="pwd yahei16" id="userPwd" name="userPwd" value="${resultInfo.result.upwd}" /><br /><br />
+                    <input name="rem" type="checkbox" value="1"  class="inputcheckbox"/> <label>记住我</label>&nbsp; &nbsp;
+                    <span id="msg" style="font-size: 12px; color: red">${resultInfo.msg}</span><br /><br />
+                    <input type="button" class="log jc yahei16" value="登 录" onclick="checkLogin()" />&nbsp; &nbsp; &nbsp; <input type="reset" value="取 消" class="reg jc yahei18" />
                 </form>
             </div>
         </div>

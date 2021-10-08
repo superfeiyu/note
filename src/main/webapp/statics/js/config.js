@@ -98,6 +98,11 @@ function checkLogin() {
     var userName = $("#userName").val();
     var userPwd = $("#userPwd").val();
 
+    if(isEmpty(userName)&&isEmpty(userPwd)){
+        $("#msg").html("用户名或密码不能为空!");
+        return;
+    }
+
     if (isEmpty(userName)) {
         $("#msg").html("用户名不能为空!");
         return;

@@ -41,7 +41,7 @@ public class UserServlet extends HttpServlet {
                 cookie.setMaxAge(0);
                 response.addCookie(cookie);
             }
-            response.sendRedirect("index.jsp");
+            response.sendRedirect("index");
         } else {
             request.setAttribute("resultInfo", resultInfo);
             request.getRequestDispatcher("login.jsp").forward(request, response);
